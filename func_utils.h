@@ -334,7 +334,7 @@ int execute(vins instructions){
 					int devnullfd=open("/dev/null",O_CREAT);
 					dup2(devnullfd,1);
 					close(devnullfd);
-					bjob.insert({job_count++,instructions[0].prog});
+					//bjob.insert({job_count++,instructions[0].prog});
 				}
 		        if (execvp(argv[0], (char* const*)argv) < 0) { 
 		        	perror("error");
@@ -396,7 +396,7 @@ int execute(vins instructions){
 					int devnullfd=open("/dev/null",O_NONBLOCK);
 					dup2(devnullfd,1);
 					close(devnullfd);
-					bjob.insert({job_count++,instructions[i].prog});
+					//bjob.insert({job_count++,instructions[i].prog});
 				}
 		        execvp(argv[0], (char* const*)argv);
 				perror("error");
